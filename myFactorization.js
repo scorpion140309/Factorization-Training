@@ -34,7 +34,12 @@ function generatePair() {
 // Function to generate a factoring problem with quadratic expressions
 function generateFactoringProblem() {
     const { slope: a, intercept: b } = generatePair();
-    const { slope: c, intercept: d } = generatePair();
+	let c = 1, d = 1;
+	do {
+		const { slope: tmp_c, intercept: tmp_d } = generatePair();
+		c = tmp_c;
+		d = tmp_c;
+	} while (a == c);
 
 	const coef_2 = a * c
     if (coef_2 !== 1) {
