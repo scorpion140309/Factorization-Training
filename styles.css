@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* キャンバスとボタンを縦方向に配置 */
+    justify-content: center; /* キャンバスとボタンを中央に配置 */
+    align-items: center;
+}
+
+#canvas-container {
+    display: flex;
+    flex-direction: column; /* キャンバスとClearボタンを縦方向に配置 */
+    align-items: center; /* キャンバスとClearボタンを中央に配置 */
+    display: flex;
+}
+
+canvas {
+    border: 1px solid #000;
+    margin-top: 20px; /* キャンバスとボタンの間に余白を設定 */
+}
+
+#clear-button {
+    margin-top: 10px; /* Clearボタンの上に余白を設定 */
+}
+
+#button-container button {
+    margin: 5px; /* ボタン間の間隔を調整 */
+}
+
+.fomula-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直方向の中央揃え */
+    width: 80%; /* ウィンドウ幅の80% */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 10px 0;
+}
+#problem {
+    text-align: right; /* 右寄せ */
+    flex: 48; /* 幅の割合 */
+}
+#equal {
+    text-align: center; /* 中央寄せ */
+    flex: 4; /* 幅の割合 */
+}
+#answer {
+    text-align: left; /* 左寄せ */
+    flex: 48; /* 幅の割合 */
+}
+
+/* MathJaxで使用される数式の文字サイズを調整 */
+.MathJax {
+    font-size: 48px !important; /* 数式の文字サイズを24pxに設定 */
+}

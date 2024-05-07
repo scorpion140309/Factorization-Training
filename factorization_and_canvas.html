@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Factorization Training</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- MathJaxのスクリプトを読み込む -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<div class="fomula-container">
+		<div id="problem">\[ \] </div>
+		<div id="equal">\[ = \] </div>
+		<div id="answer">\[ 	\] </div>
+	</div>
+	<div id="button-container">
+		<button id="newProblemButton" onclick="generateProblemAndAnswer()">New Problem</button>
+		<button id="toggleAnswerButton" onclick="toggleAnswer()">Toggle Answer</button>
+		<button id="clear-button">Clear</button>
+	</div>
+	<div id="canvas-container">
+		<canvas id="canvas"></canvas>
+	</div>
+	<script src="myFactorization.js"></script>
+	<script src="myCanvas.js"></script>
+	</body>
+</html>
