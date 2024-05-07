@@ -38,7 +38,7 @@ function generateFactoringProblem() {
 	do {
 		const { slope: tmp_c, intercept: tmp_d } = generatePair();
 		c = tmp_c;
-		d = tmp_c;
+		d = tmp_d;
 	} while (a == c);
 
 	const coef_2 = a * c
