@@ -1,6 +1,10 @@
+//
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+
 document.addEventListener("DOMContentLoaded", function () {
-    const canvas = document.getElementById("canvas");
-    const context = canvas.getContext("2d");
+    //const canvas = document.getElementById("canvas");
+    //const context = canvas.getContext("2d");
 
     function resizeCanvas() {
         canvas.width = window.innerWidth * 0.9; // ウィンドウの幅の90%
@@ -64,3 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // ウィンドウサイズが変更されたときにキャンバスのサイズを更新する
     window.addEventListener("resize", resizeCanvas);
 });
+
+// Function to clear the canvas
+function clearCanvas() {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+}

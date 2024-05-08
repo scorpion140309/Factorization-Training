@@ -125,5 +125,11 @@ function generateProblemAndAnswer() {
     displayProblemAndAnswer();
 }
 
+// Function to generate a new problem and its answer and hide the answer
+function resetAllFomula() {
+    isAnswerShown = false;
+    displayProblemAndAnswer();
+}
+
 // Display the initial problem and answer
 generateProblemAndAnswer();

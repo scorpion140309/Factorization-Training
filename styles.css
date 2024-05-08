@@ -21,6 +21,18 @@ canvas {
     margin-top: 20px;
 }
 
+#back-to-parent-site-button {
+    margin-top: 10px;
+    margin-right: 10px;
+	font-size: 32px;
+	color: #ff0000
+}
+
+#reset-all-button {
+    margin-top: 10px;
+	font-size: 32px;
+}
+
 #new-problem-button {
     margin-top: 10px;
 	font-size: 32px;
