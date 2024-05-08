@@ -32,6 +32,53 @@ function generatePair() {
     return { slope: num1, intercept: num2 };
 }
 
+//
+function generateAnswerNormal(a, b, c, d){
+    factoredExpression += "(";
+    if (a !== 1 && a !== -1) {
+        factoredExpression += a;
+    } else if (a === -1) {
+        factoredExpression += "-";
+    }
+    factoredExpression += "x";
+
+    if (b !== 0) {
+        factoredExpression += (b > 0 ? "+" : "") + b;
+    }
+
+    factoredExpression += ")(";
+
+    if (c !== 1 && c !== -1) {
+        factoredExpression += c;
+    } else if (c === -1) {
+        factoredExpression += "-";
+    }
+    factoredExpression += "x";
+
+    if (d !== 0) {
+        factoredExpression += (d > 0 ? "+" : "") + d;
+    }
+
+    factoredExpression += ")";
+}
+
+//
+function generateAnswer2(a, b){
+    factoredExpression += "(";
+    if (a !== 1 && a !== -1) {
+        factoredExpression += a;
+    } else if (a === -1) {
+        factoredExpression += "-";
+    }
+    factoredExpression += "x";
+
+    if (b !== 0) {
+        factoredExpression += (b > 0 ? "+" : "") + b;
+    }
+
+    factoredExpression += ") ^ 2";
+}
+
 // Function to generate a factoring problem with quadratic expressions
 function generateFactoringProblem() {
     const { slope: a, intercept: b } = generatePair();
@@ -71,33 +118,13 @@ function generateFactoringProblem() {
         }
         quadraticExpression += (b * d);
     }
-
-    factoredExpression += "(";
-    if (a !== 1 && a !== -1) {
-        factoredExpression += a;
-    } else if (a === -1) {
-        factoredExpression += "-";
-    }
-    factoredExpression += "x";
-
-    if (b !== 0) {
-        factoredExpression += (b > 0 ? "+" : "") + b;
-    }
-
-    factoredExpression += ")(";
-
-    if (c !== 1 && c !== -1) {
-        factoredExpression += c;
-    } else if (c === -1) {
-        factoredExpression += "-";
-    }
-    factoredExpression += "x";
-
-    if (d !== 0) {
-        factoredExpression += (d > 0 ? "+" : "") + d;
-    }
-
-    factoredExpression += ")";
+	
+	//
+	if (a != c || b != d) {
+		generateAnswerNormal(a, b, c, d);
+	} else {
+		generateAnswer2(a, b);
+	}
 }
 
 // Function to display the problem and its answer
