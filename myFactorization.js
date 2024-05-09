@@ -25,7 +25,7 @@ function generateRandomNonZero() {
 function generatePair() {
     let num1, num2;
     do {
-        num1 = Math.floor(Math.random() * 5) + 1;
+        num1 = Math.floor(Math.random() * 7) + 1;
         num2 = generateRandomNonZero();
     } while (gcd(num1, num2) !== 1);
     return { slope: num1, intercept: num2 };
