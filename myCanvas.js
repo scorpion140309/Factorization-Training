@@ -3,22 +3,19 @@ const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
 document.addEventListener("DOMContentLoaded", function () {
-    //const canvas = document.getElementById("canvas");
-    //const context = canvas.getContext("2d");
-
     function resizeCanvas() {
-        canvas.width = window.innerWidth * 0.9; // ウィンドウの幅の90%
-        canvas.height = window.innerHeight * 0.8; // ウィンドウの高さの80%
+        canvas.width = window.innerWidth * 0.9; // 90% of window-width
+        canvas.height = window.innerHeight * 0.8; // 80% of window-height
     }
 
-    resizeCanvas(); // 初期化時にキャンバスのサイズを設定
+    resizeCanvas(); // set canvas size when it is initialized.
 
     let isDrawing = false;
 
     function startDrawing(e) {
         isDrawing = true;
         draw(getMousePos(e));
-        e.preventDefault(); // ブラウザのデフォルトのタッチ操作を無効化
+        e.preventDefault(); // disable touch operation
     }
 
     function stopDrawing() {
@@ -29,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function draw(pos) {
         if (!isDrawing) return;
 
-        // 線を描画
+        // draw a line
         context.lineTo(pos.x, pos.y);
         context.stroke();
         context.beginPath();
@@ -59,13 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.addEventListener("mouseup", stopDrawing);
     canvas.addEventListener("touchend", stopDrawing);
 
-    // Clearボタンのクリックイベントを追加
+    // add the button-click event
     const clearButton = document.getElementById("clear-button");
     clearButton.addEventListener("click", function() {
         context.clearRect(0, 0, canvas.width, canvas.height);
     });
 
-    // ウィンドウサイズが変更されたときにキャンバスのサイズを更新する
+    // resize a canvas when a window is resized
     window.addEventListener("resize", resizeCanvas);
 });
 
