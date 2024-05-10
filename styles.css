@@ -1,79 +1,79 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #canvas-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
 }
 
 canvas {
-    border: 1px solid #000;
-    margin-top: 20px;
+	border: 1px solid #000;
+	margin-top: 20px;
 }
 
 #back-to-parent-site-button {
-    margin-top: 10px;
-    margin-right: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
 	font-size: 32px;
 	color: #ff0000
 }
 
 #reset-all-button {
-    margin-top: 10px;
+	margin-top: 10px;
 	font-size: 32px;
 }
 
 #new-problem-button {
-    margin-top: 10px;
+	margin-top: 10px;
 	font-size: 32px;
 }
 
 #toggle-button {
-    margin-top: 10px;
+	margin-top: 10px;
 	font-size: 32px;
 }
 
 #clear-button {
-    margin-top: 10px;
+	margin-top: 10px;
 	font-size: 32px;
 }
 
 #button-container button {
-    margin: 5px;
+	margin: 5px;
 }
 
 .fomula-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px 0;
 }
 #problem {
-    text-align: right;
-    flex: 48;
+	text-align: right;
+	flex: 48;
 }
 #equal {
-    text-align: center;
-    flex: 4;
+	text-align: center;
+	flex: 4;
 }
 #answer {
-    text-align: left;
-    flex: 48;
+	text-align: left;
+	flex: 48;
 }
 
 /* Adjust font size of formulas used in MathJax */
 .MathJax {
-    font-size: 48px !important;
+	font-size: 48px !important;
 }
