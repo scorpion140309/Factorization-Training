@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-99FK13PW8Q"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-	  gtag('config', 'G-99FK13PW8Q');
-	</script>
-	<meta charset="UTF-8">
-	<title>Factorization Training (Basic)</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
-	<div class="fomula-container">
-		<div id="problem">\[ \] </div>
-		<div id="equal">\[ = \] </div>
-		<div id="answer">\[ \] </div>
-	</div>
-	<div id="button-container">
-		<button id="back-to-parent-site-button" onclick="location.href='../math/'">Back to Home</button>
-		<button id="reset-all-button" onclick="resetAllFomula();generateProblemAndAnswer();clearCanvas();">Reset All</button>
-		<button id="new-problem-button" onclick="generateProblemAndAnswer()">New Problem</button>
-		<button id="toggle-button" onclick="toggleAnswer()">Toggle Answer</button>
-		<button id="clear-button">Clear</button>
-	</div>
-	<div id="canvas-container">
-		<canvas id="canvas"></canvas>
-	</div>
-	<script src="myFactorizationBasic.js"></script>
-	<script src="myCanvas.js"></script>
+			gtag('config', 'G-99FK13PW8Q');
+		</script>
+		<meta charset="UTF-8">
+		<title>Factorization Training (Basic)</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	<body>
+		<div class="fomula-container">
+			<div id="problem">\[ \] </div>
+			<div id="equal">\[ = \] </div>
+			<div id="answer">\[ \] </div>
+		</div>
+		<div>
+			We use Google Analytics for access analysis. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>	
+		</div>
+		<div id="button-container">
+			<button id="back-to-parent-site-button" onclick="location.href='../math/'">Back to Home</button>
+			<button id="reset-all-button" onclick="resetAllFomula();generateProblemAndAnswer();clearCanvas();">Reset All</button>
+			<button id="new-problem-button" onclick="generateProblemAndAnswer()">New Problem</button>
+			<button id="toggle-button" onclick="toggleAnswer()">Toggle Answer</button>
+			<button id="clear-button">Clear</button>
+		</div>
+		<div id="canvas-container">
+			<canvas id="canvas"></canvas>
+		</div>
+		<script src="myFactorizationBasic.js"></script>
+		<script src="myCanvas.js"></script>
 	</body>
 </html>
