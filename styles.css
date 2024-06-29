@@ -33,7 +33,7 @@ canvas {
 	font-size: 32px;
 }
 
-#new-problem-button {
+#new-exercise-button {
 	margin-top: 10px;
 	font-size: 32px;
 }
@@ -60,7 +60,7 @@ canvas {
 	margin: 0 auto;
 	padding: 10px 0;
 }
-#problem {
+#exercise {
 	text-align: right;
 	flex: 48;
 }

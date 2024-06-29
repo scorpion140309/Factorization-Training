@@ -14,7 +14,7 @@ function gcd(a, b) {
 
 // Function to generate a random non-zero number
 function generateRandomNonZero() {
-	const range_half = 9;
+	const range_half = 16;
 	let num = Math.floor(Math.random() * (2 * range_half)) - range_half;
 	if (num >= 0)
 	{
@@ -26,11 +26,11 @@ function generateRandomNonZero() {
 // Function to generate a pair of numbers with a coprime relationship
 function generatePair() {
 	let num1, num2;
-	do {
+	//do {
 		//num1 = Math.floor(Math.random() * 5) + 1;
 		num1 = 1;
 		num2 = generateRandomNonZero();
-	} while (gcd(num1, num2) !== 1);
+	//} while (gcd(num1, num2) !== 1);
 	return { slope: num1, intercept: num2 };
 }
 
@@ -81,8 +81,8 @@ function generateAnswer2(a, b){
 	factoredExpression += ") ^ 2";
 }
 
-// Function to generate a factoring problem with quadratic expressions
-function generateFactoringProblem() {
+// Function to generate a factoring exercise with quadratic expressions
+function generateFactoringExercise() {
 	const { slope: a, intercept: b } = generatePair();
 	let c = 1, d = 1;
 	do {
@@ -129,10 +129,10 @@ function generateFactoringProblem() {
 	}
 }
 
-// Function to display the problem and its answer
-function displayProblemAndAnswer() {
+// Function to display the exercise and its answer
+function displayExerciseAndAnswer() {
 	// Writing equations in TeX format for rendering with MathJax
-	const problemElement = document.getElementById("problem");
+	const problemElement = document.getElementById("exercise");
 	problemElement.innerHTML = "\\[" + quadraticExpression + "\\]";
 
 	const answerElement = document.getElementById("answer");
@@ -144,22 +144,22 @@ function displayProblemAndAnswer() {
 // Function to toggle the visibility of the answer
 function toggleAnswer() {
 	isAnswerShown = !isAnswerShown;
-	displayProblemAndAnswer();
+	displayExerciseAndAnswer();
 }
 
-// Function to generate a new factoring problem and its answer
-function generateProblemAndAnswer() {
+// Function to generate a new factoring exercise and its answer
+function generateExerciseAndAnswer() {
 	quadraticExpression = "";
 	factoredExpression = "";
-	generateFactoringProblem();
-	displayProblemAndAnswer();
+	generateFactoringExercise();
+	displayExerciseAndAnswer();
 }
 
-// Function to generate a new problem and its answer and hide the answer
+// Function to generate a new exercise and its answer and hide the answer
 function resetAllFomula() {
 	isAnswerShown = false;
-	displayProblemAndAnswer();
+	displayExerciseAndAnswer();
 }
 
-// Display the initial problem and answer
-generateProblemAndAnswer();
+// Display the initial exercise and answer
+generateExerciseAndAnswer();

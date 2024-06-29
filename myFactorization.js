@@ -33,8 +33,8 @@ function generatePair() {
 	return { slope: num1, intercept: num2 };
 }
 
-// Function to generate a factoring problem with quadratic expressions
-function generateFactoringProblem() {
+// Function to generate a factoring exercise with quadratic expressions
+function generateFactoringExercise() {
 	const { slope: a, intercept: b } = generatePair();
 	let c = 1, d = 1;
 	do {
@@ -101,11 +101,11 @@ function generateFactoringProblem() {
 	factoredExpression += ")";
 }
 
-// Function to display the problem and its answer
-function displayProblemAndAnswer() {
+// Function to display the exercise and its answer
+function displayExerciseAndAnswer() {
 	// Writing equations in TeX format for rendering with MathJax
-	const problemElement = document.getElementById("problem");
-	problemElement.innerHTML = "\\[" + quadraticExpression + "\\]";
+	const exerciseElement = document.getElementById("exercise");
+	exerciseElement.innerHTML = "\\[" + quadraticExpression + "\\]";
 
 	const answerElement = document.getElementById("answer");
 	answerElement.innerHTML = isAnswerShown ? "\\[" + factoredExpression + "\\]" : "\\[\\]";
@@ -116,22 +116,22 @@ function displayProblemAndAnswer() {
 // Function to toggle the visibility of the answer
 function toggleAnswer() {
 	isAnswerShown = !isAnswerShown;
-	displayProblemAndAnswer();
+	displayExerciseAndAnswer();
 }
 
-// Function to generate a new factoring problem and its answer
-function generateProblemAndAnswer() {
+// Function to generate a new factoring exercise and its answer
+function generateExerciseAndAnswer() {
 	quadraticExpression = "";
 	factoredExpression = "";
-	generateFactoringProblem();
-	displayProblemAndAnswer();
+	generateFactoringExercise();
+	displayExerciseAndAnswer();
 }
 
-// Function to generate a new problem and its answer and hide the answer
+// Function to generate a new exercise and its answer and hide the answer
 function resetAllFomula() {
 	isAnswerShown = false;
-	displayProblemAndAnswer();
+	displayExerciseAndAnswer();
 }
 
-// Display the initial problem and answer
-generateProblemAndAnswer();
+// Display the initial exercise and answer
+generateExerciseAndAnswer();
